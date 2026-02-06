@@ -2,9 +2,9 @@
 
 Contributors: raratheme
 Requires at least: 4.7
-Requires PHP: 5.6
-Tested up to: 5.7
-Stable tag: 1.1.0
+Requires PHP: 7.4
+Tested up to: 6.8
+Stable tag: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ All other images including icon image and images used in customizer settings are
 
 == Changelog ==
 	
+	1.1.1 - November 18, 2025
+	* Update: Updated WordPress Version to 6.8.
+
 	1.1.0
 	* Fixed menu accessibility
 	* Fixed jQuery deprecated warnings 

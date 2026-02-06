@@ -5,9 +5,9 @@ Author: Rara Theme
 Author URI: https://rarathemes.com/
 Description: School Zone is a child theme of Education Zone free WordPress theme. School Zone is designed to suit special requirements of educational institutions like college, school, university, LMS, Training Center, Academy, Primary School, High school and Kindergarten. School Zone is very versatile and can be used to build various types of corporate and business websites. The theme is highly customizable with various features and personalization options. Like the parent theme, School Zone includes features like custom menu, attractive banner, stats counter, courses section, testimonial section, banner with Call-to-Action(CTA) button, and social media. The theme is SEO friendly with optimized codes, which make it easy for your site to rank on Google and other search engines. The theme is rigorously tested and optimized for speed and faster page load time and has a secure and clean code. The theme is also translation ready. Designed with visitor engagement in mind, School Zone helps you to easily and intuitively create professional and appealing websites. If your school, college or university needs an online home that is dynamic and multi-functional, this theme is a good place to start. Check the demo at https://rarathemes.com/previews/?theme=school-zone, documentation at https://docs.rarathemes.com/docs/education-zone/, and get support at https://rarathemes.com/support-ticket/.
 Template: education-zone
-Version: 1.1.0
-Requires PHP: 5.6
-Tested up to: 5.7
+Version: 1.1.1
+Requires PHP: 7.4
+Tested up to: 6.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: school-zone
@@ -76,17 +76,17 @@ a {
   padding-top: 15px;
 }
 
-.site-header.header-two .header-top .secondary-nav ul li:hover>ul {
+.site-header.header-two .header-top .secondary-nav ul li:hover > ul {
   opacity: 1;
   left: -15px;
 }
 
-.site-header.header-two .header-top .secondary-nav ul li:focus-within>ul {
+.site-header.header-two .header-top .secondary-nav ul li:focus-within > ul {
   opacity: 1;
   left: -15px;
 }
 
-.site-header.header-two .header-top .secondary-nav ul li.focus>ul {
+.site-header.header-two .header-top .secondary-nav ul li.focus > ul {
   opacity: 1;
   left: -15px;
 }
@@ -228,7 +228,8 @@ a {
 .site-header.header-two .form-section .example form input[type="submit"] {
   float: left;
   width: 35px;
-  background: rgba(0, 0, 0, 0) url("images/search-icon.png") no-repeat scroll 12px 5px;
+  background: rgba(0, 0, 0, 0) url("images/search-icon.png") no-repeat scroll
+    12px 5px;
   border: 0;
   padding: 0;
   box-shadow: none;
@@ -317,6 +318,17 @@ a {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
   height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .banner .banner-text {
+    position: relative;
+  }
+
+  .banner .banner-text .text .btn-holder a.btn-free-inquiry,
+  .banner .banner-text .text .btn-holder a.btn-view-service {
+    margin-bottom: 14px;
+  }
 }
 
 .banner .banner-text .text {
@@ -598,20 +610,20 @@ a {
 
   .mobile-menu .main-navigation ul li a:hover,
   .mobile-menu .main-navigation ul li a:focus,
-  .mobile-menu .main-navigation ul li:hover>a,
-  .mobile-menu .main-navigation ul li:focus>a,
-  .mobile-menu .main-navigation ul .current-menu-item>a,
-  .mobile-menu .main-navigation ul .current-menu-ancestor>a,
-  .mobile-menu .main-navigation ul .current_page_item>a,
-  .mobile-menu .main-navigation ul .current_page_ancestor>a,
+  .mobile-menu .main-navigation ul li:hover > a,
+  .mobile-menu .main-navigation ul li:focus > a,
+  .mobile-menu .main-navigation ul .current-menu-item > a,
+  .mobile-menu .main-navigation ul .current-menu-ancestor > a,
+  .mobile-menu .main-navigation ul .current_page_item > a,
+  .mobile-menu .main-navigation ul .current_page_ancestor > a,
   .mobile-menu .secondary-nav ul li a:hover,
   .mobile-menu .secondary-nav ul li a:focus,
-  .mobile-menu .secondary-nav ul li:hover>a,
-  .mobile-menu .secondary-nav ul li:focus>a,
-  .mobile-menu .secondary-nav ul .current-menu-item>a,
-  .mobile-menu .secondary-nav ul .current-menu-ancestor>a,
-  .mobile-menu .secondary-nav ul .current_page_item>a,
-  .mobile-menu .secondary-nav ul .current_page_ancestor>a,
+  .mobile-menu .secondary-nav ul li:hover > a,
+  .mobile-menu .secondary-nav ul li:focus > a,
+  .mobile-menu .secondary-nav ul .current-menu-item > a,
+  .mobile-menu .secondary-nav ul .current-menu-ancestor > a,
+  .mobile-menu .secondary-nav ul .current_page_item > a,
+  .mobile-menu .secondary-nav ul .current_page_ancestor > a,
   .mobile-menu .contact-info a:hover,
   .mobile-menu .contact-info a:focus {
     color: #79b530;
@@ -708,8 +720,7 @@ a {
   outline: 1px dotted white;
 }
 
-
-@media only screen and (min-width:991px) {
+@media only screen and (min-width: 991px) {
   .search-form ::placeholder {
     color: white;
   }
